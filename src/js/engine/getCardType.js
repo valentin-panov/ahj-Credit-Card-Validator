@@ -5,6 +5,7 @@ export default function getCardType(number) {
   let type = false;
   switch (number.substring(0, 2)) {
     // не придумал с ходу, как красиво решить это, кроме как захардкодить (
+    case `4`:
     case `40`:
     case `41`:
     case `42`:
