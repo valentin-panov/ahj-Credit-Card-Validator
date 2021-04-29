@@ -1,6 +1,6 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/flj0sfoqhkvydmei?svg=true)](https://ci.appveyor.com/project/vapanov/ahj-top-task)
+[![Build status](https://ci.appveyor.com/api/projects/status/ct54ucynnhs57j2a?svg=true)](https://ci.appveyor.com/project/vapanov/ahj-credit-card-validator)
 
-WEB Version https://vapanov.github.io/ahj-top_task/
+WEB Version https://vapanov.github.io/ahj-credit_card_validator/
 
 ---
 
