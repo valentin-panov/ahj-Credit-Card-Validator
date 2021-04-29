@@ -1,11 +1,11 @@
 export default function getCardType(number) {
-  if (!number) {
+  if (number.length < 2) {
     return false;
   }
   let type = false;
   switch (number.substring(0, 2)) {
     // не придумал с ходу, как красиво решить это, кроме как захардкодить (
-    case `4`:
+    // вариант сложить это всё в объект и насиловать уже объект?
     case `40`:
     case `41`:
     case `42`:
