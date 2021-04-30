@@ -2,7 +2,7 @@
 import json from '../data/paySystemCodes.json';
 
 export default function getCardType(number) {
-  if (number.length < 1) {
+  if (!number) {
     return false;
   }
   let cardType = true;
