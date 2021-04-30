@@ -1,54 +1,18 @@
+/* eslint-disable prefer-destructuring */
+import json from '../data/paySystemCodes.json';
+
 export default function getCardType(number) {
-  if (number.length < 2) {
+  if (number.length < 1) {
     return false;
   }
-  let type = false;
-  switch (number.substring(0, 2)) {
-    // не придумал с ходу, как красиво решить это, кроме как захардкодить (
-    // вариант сложить это всё в объект и насиловать уже объект?
-    case `40`:
-    case `41`:
-    case `42`:
-    case `43`:
-    case `44`:
-    case `45`:
-    case `46`:
-    case `47`:
-    case `48`:
-    case `49`:
-      type = 'visa';
-      break;
-    case '22':
-      type = 'mir';
-      break;
-    case '51':
-    case '52':
-    case '53':
-    case '54':
-    case '55':
-      type = 'master';
-      break;
-    case '34':
-    case '37':
-      type = 'amex';
-      break;
-    case '31':
-    case '35':
-      type = 'jcb';
-      break;
-    case '30':
-    case '36':
-    case '38':
-      type = 'diners_club';
-      break;
-    case '60':
-      type = 'discover';
-      break;
-    default:
-      type = true;
-      break;
-  }
-  return type;
+  let cardType = true;
+  Object.entries(json).forEach((element) => {
+    // eslint-disable-next-line eqeqeq
+    if (element[1].find((item) => item == number.substring(0, 2))) {
+      cardType = element[0];
+    }
+  });
+  return cardType;
 }
 
 // Credit Card Type	Credit Card Number

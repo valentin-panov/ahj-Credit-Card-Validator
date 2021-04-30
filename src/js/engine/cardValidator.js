@@ -18,7 +18,7 @@ export default class CardValidator {
   init() {
     setInputFilter(
       this.cardNumberInput,
-      (value) => /^\d*\.?\d*$/.test(value) // Allow digits and '.' only, using a RegExp
+      (value) => /^\d*$/.test(value) // Allow digits only
     );
     this.addInputListeners();
     this.cardNumberInput.focus();
